@@ -412,14 +412,6 @@ footer a:hover{color:#C8A96E;}
 </footer>
 
 <script>
-// ── CONFIG ──────────────────────────────────────────
-// In your Google Sheet set up two columns:
-//   A1: Percentage    A2: (the number, e.g. 34)
-//   B1: Members       B2: (the exact count, e.g. 51)
-// Publish: File > Share > Publish to web > Sheet1 > CSV > Publish
-// Paste the published CSV URL below
-var CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT0elBqVsSriN0YfFDUGPyeg0HU6JuJsdeNxROUsuV4sBBa2Gl57U1rjOt_lFB6BNqPhMGZqJFAjOxi/pub?output=csv';
-
 // ── TICK MARKS ──────────────────────────────────────
 var ticksEl = document.getElementById('thermoTicks');
 var tickLabels = ['100%','75%','50%','25%','0%'];
@@ -463,26 +455,12 @@ function setThermometer(pct, memberCount){
   }
 }
 
-// ── FETCH FROM GOOGLE SHEET ─────────────────────────
+// ── FETCH FROM LOCAL FILE ────────────────────────────
 function loadProgress(){
-  if(CSV_URL === 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT0elBqVsSriN0YfFDUGPyeg0HU6JuJsdeNxROUsuV4sBBa2Gl57U1rjOt_lFB6BNqPhMGZqJFAjOxi/pub?output=csv'){
-    setThermometer(12, 18);
-    document.getElementById('milestone').textContent = 'Connect your Google Sheet to go live.';
-    return;
-  }
-  fetch(CSV_URL)
-    .then(function(r){ return r.text(); })
-    .then(function(text){
-      // CSV rows: row 0 = headers, row 1 = data
-      var rows = text.trim().split('\n');
-      var dataRow = rows[1] ? rows[1].split(',') : [];
-      var pct = parseFloat(dataRow[0]);
-      var members = parseInt(dataRow[1]);
-      if(!isNaN(pct)){
-        setThermometer(pct, !isNaN(members) ? members : null);
-      } else {
-        setThermometer(0, null);
-      }
+  fetch('progress.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      setThermometer(data.percentage, data.members);
     })
     .catch(function(){
       setThermometer(0, null);
