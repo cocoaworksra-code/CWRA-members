@@ -418,7 +418,7 @@ footer a:hover{color:#C8A96E;}
 //   B1: Members       B2: (the exact count, e.g. 51)
 // Publish: File > Share > Publish to web > Sheet1 > CSV > Publish
 // Paste the published CSV URL below
-var CSV_URL = 'YOUR_GOOGLE_SHEET_CSV_URL_HERE';
+var CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT0elBqVsSriN0YfFDUGPyeg0HU6JuJsdeNxROUsuV4sBBa2Gl57U1rjOt_lFB6BNqPhMGZqJFAjOxi/pub?output=csv';
 
 // ── TICK MARKS ──────────────────────────────────────
 var ticksEl = document.getElementById('thermoTicks');
@@ -465,7 +465,7 @@ function setThermometer(pct, memberCount){
 
 // ── FETCH FROM GOOGLE SHEET ─────────────────────────
 function loadProgress(){
-  if(CSV_URL === 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT0elBqVsSriN0YfFDUGPyeg0HU6JuJsdeNxROUsuV4sBBa2Gl57U1rjOt_lFB6BNqPhMGZqJFAjOxi/pub?gid=0&single=true&output=csv'){
+  if(CSV_URL === 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT0elBqVsSriN0YfFDUGPyeg0HU6JuJsdeNxROUsuV4sBBa2Gl57U1rjOt_lFB6BNqPhMGZqJFAjOxi/pub?output=csv'){
     setThermometer(12, 18);
     document.getElementById('milestone').textContent = 'Connect your Google Sheet to go live.';
     return;
