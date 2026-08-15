@@ -11,7 +11,9 @@ html{background:#1A1008;}
 body{background:#1A1008;color:#FAF6F0;font-family:'Lora',Georgia,serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;overflow-x:hidden;}
 header{width:100%;background:#1A1008;border-bottom:2px solid #C8A96E;padding:1.25rem 2rem;text-align:center;}
 .header-eyebrow{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:#C8A96E;margin-bottom:.5rem;}
-.header-title{font-family:'Playfair Display SC',serif;font-size:clamp(1rem,3vw,1.4rem);font-weight:700;color:#FAF6F0;letter-spacing:.1em;}
+.header-title{font-family:'Playfair Display SC',serif;font-size:clamp(1rem,3vw,1.4rem);font-weight:700;color:#FAF6F0;letter-spacing:.1em;margin-bottom:.75rem;}
+.header-cta{display:inline-block;background:#2C4A2E;color:#FAF6F0;text-decoration:none;padding:.6rem 1.5rem;font-family:'Playfair Display SC',serif;font-size:.7rem;letter-spacing:.12em;border:1px solid #2C4A2E;transition:background .2s;}
+.header-cta:hover{background:#3a6040;}
 
 /* CELEBRATION BANNER */
 .celebration{width:100%;background:linear-gradient(135deg,#1A1008 0%,#2C4A2E 50%,#1A1008 100%);border-bottom:3px solid #C8A96E;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;}
@@ -34,6 +36,19 @@ header{width:100%;background:#1A1008;border-bottom:2px solid #C8A96E;padding:1.2
 .hero{text-align:center;padding:2rem 2rem .5rem;max-width:680px;}
 .hero h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;color:#FAF6F0;margin-bottom:.5rem;}
 .hero p{font-size:.95rem;color:rgba(250,246,240,.7);line-height:1.8;max-width:520px;margin:0 auto;}
+
+/* NEXT STEPS - standalone above main */
+.next-steps-outer{width:100%;max-width:680px;padding:1.5rem 2rem 0;}
+.next-steps{border:1.5px solid #C8A96E;background:#FAF6F0;overflow:hidden;}
+.next-steps-header{background:#3B1F0A;padding:.75rem 1.25rem;border-left:4px solid #C8A96E;}
+.next-steps-header h3{font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;color:#FAF6F0;letter-spacing:.1em;text-transform:uppercase;margin:0;}
+.next-steps-body{padding:1.25rem;}
+.step{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.1rem;}
+.step:last-child{margin-bottom:0;}
+.step-num{flex-shrink:0;width:28px;height:28px;background:#2C4A2E;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;color:#FAF6F0;margin-top:.1rem;}
+.step-text h4{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:#1A1008;margin-bottom:.2rem;}
+.step-text p{font-size:.8rem;color:#333333;line-height:1.6;}
+.step-date{display:inline-block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#2C4A2E;background:rgba(44,74,46,.1);padding:.15rem .5rem;margin-top:.25rem;border-radius:2px;}
 
 /* MAIN */
 .main{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;gap:3rem;padding:2rem 2rem 3rem;max-width:900px;width:100%;flex-wrap:wrap;}
@@ -61,33 +76,21 @@ header{width:100%;background:#1A1008;border-bottom:2px solid #C8A96E;padding:1.2
 .stat-card{background:#3B1F0A;padding:1.25rem 1rem;text-align:center;}
 .stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:#C8A96E;line-height:1;margin-bottom:.3rem;}
 .stat-desc{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,240,.55);line-height:1.4;}
-
-/* NEXT STEPS */
-.next-steps{border:1.5px solid #C8A96E;background:#FAF6F0;overflow:hidden;}
-.next-steps-header{background:#3B1F0A;padding:.75rem 1.25rem;border-left:4px solid #C8A96E;}
-.next-steps-header h3{font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;color:#FAF6F0;letter-spacing:.1em;text-transform:uppercase;margin:0;}
-.next-steps-body{padding:1.25rem;}
-.step{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.1rem;}
-.step:last-child{margin-bottom:0;}
-.step-num{flex-shrink:0;width:28px;height:28px;background:#2C4A2E;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;color:#FAF6F0;margin-top:.1rem;}
-.step-text h4{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:#1A1008;margin-bottom:.2rem;}
-.step-text p{font-size:.8rem;color:#333333;line-height:1.6;}
-.step-date{display:inline-block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#2C4A2E;background:rgba(44,74,46,.1);padding:.15rem .5rem;margin-top:.25rem;border-radius:2px;}
-
 .info-box{border:1px solid rgba(200,169,110,.25);padding:1.5rem;background:rgba(59,31,10,.4);}
 .info-box h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#FAF6F0;margin-bottom:.6rem;}
 .info-box p{font-size:.85rem;color:rgba(250,246,240,.65);line-height:1.75;}
-.cta-btn{display:block;background:#2C4A2E;color:#FAF6F0;text-decoration:none;text-align:center;padding:1.1rem 2rem;font-family:'Playfair Display SC',serif;font-size:.85rem;letter-spacing:.15em;transition:background .2s,transform .2s;border:1px solid #2C4A2E;}
-.cta-btn:hover{background:#3a6040;transform:translateY(-2px);}
-.cta-btn-sub{font-size:.7rem;color:rgba(250,246,240,.45);letter-spacing:.08em;text-transform:none;font-family:'Lora',serif;display:block;margin-top:.3rem;}
-.qr-section{display:flex;align-items:center;gap:1.25rem;border:1px solid rgba(200,169,110,.2);padding:1.25rem;background:rgba(26,16,8,.5);}
+.qr-section{border:1px solid rgba(200,169,110,.2);padding:1.25rem;background:rgba(26,16,8,.5);text-align:center;}
+.qr-section-top{display:flex;align-items:center;gap:1.25rem;margin-bottom:1.25rem;}
 .qr-img{width:80px;height:80px;flex-shrink:0;background:#FAF6F0;padding:4px;}
+.qr-text{text-align:left;}
 .qr-text h4{font-family:'Playfair Display',serif;font-size:.9rem;color:#FAF6F0;margin-bottom:.3rem;}
 .qr-text p{font-size:.75rem;color:rgba(250,246,240,.5);line-height:1.6;}
+.qr-cta{display:inline-block;background:#2C4A2E;color:#FAF6F0;text-decoration:none;padding:.75rem 2rem;font-family:'Playfair Display SC',serif;font-size:.72rem;letter-spacing:.12em;border:1px solid #2C4A2E;transition:background .2s;}
+.qr-cta:hover{background:#3a6040;}
 footer{width:100%;border-top:1px solid rgba(200,169,110,.2);padding:1.25rem 2rem;text-align:center;font-size:.72rem;color:rgba(250,246,240,.25);letter-spacing:.05em;}
 footer a{color:rgba(200,169,110,.4);text-decoration:none;}
 footer a:hover{color:#C8A96E;}
-@media(max-width:600px){.main{gap:2rem;padding:1.5rem 1.25rem 2.5rem;}.thermo-container{height:260px;}.right-panel{min-width:100%;}.stat-num{font-size:1.5rem;}.celebration h1{font-size:2.2rem;}}
+@media(max-width:600px){.main{gap:2rem;padding:1.5rem 1.25rem 2.5rem;}.thermo-container{height:260px;}.right-panel{min-width:100%;}.stat-num{font-size:1.5rem;}.celebration h1{font-size:2.2rem;}.next-steps-outer{padding:1rem 1.25rem 0;}}
 </style>
 </head>
 <body>
@@ -97,6 +100,7 @@ footer a:hover{color:#C8A96E;}
 <header>
   <div class="header-eyebrow">The Cocoa Works, York</div>
   <div class="header-title">Residents' Association &nbsp;&middot;&nbsp; Membership Drive</div>
+  <a href="https://docs.google.com/forms/d/1g31I3ZiJ8Nss-ZGTSU3y6ptsrFJV7GXRFFYJ1VbMTPs/viewform" target="_blank" class="header-cta">Click here to sign up</a>
 </header>
 
 <!-- CELEBRATION BANNER -->
@@ -116,9 +120,45 @@ footer a:hover{color:#C8A96E;}
   </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
   <h2>Where we stand</h2>
   <p>The thermometer has hit 100%. Here's what comes next — and how you can stay involved as we take the final steps toward formal recognition.</p>
+</div>
+
+<!-- NEXT STEPS — above thermometer -->
+<div class="next-steps-outer">
+  <div class="next-steps">
+    <div class="next-steps-header">
+      <h3>What happens next</h3>
+    </div>
+    <div class="next-steps-body">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h4>Nominations for elected positions</h4>
+          <p>We will shortly be asking for nominations for the elected committee — Chair, Vice Chair, Secretary, Treasurer, and block representatives. Details to follow.</p>
+          <span class="step-date">Coming soon</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h4>Comments on the draft constitution</h4>
+          <p>The draft constitution will be shared with all members shortly. We welcome your comments and suggestions before it is put to a vote at the AGM.</p>
+          <span class="step-date">Coming soon</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h4>Inaugural AGM</h4>
+          <p>The first Annual General Meeting of The Cocoa Works Residents' Association — where the constitution will be formally adopted and the elected committee confirmed.</p>
+          <span class="step-date">Late October 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="main">
@@ -154,39 +194,6 @@ footer a:hover{color:#C8A96E;}
       </div>
     </div>
 
-    <!-- NEXT STEPS -->
-    <div class="next-steps">
-      <div class="next-steps-header">
-        <h3>What happens next</h3>
-      </div>
-      <div class="next-steps-body">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-text">
-            <h4>Nominations for elected positions</h4>
-            <p>We will shortly be asking for nominations for the elected committee — Chair, Vice Chair, Secretary, Treasurer, and block representatives. Details to follow.</p>
-            <span class="step-date">Coming soon</span>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-text">
-            <h4>Comments on the draft constitution</h4>
-            <p>The draft constitution will be shared with all members shortly. We welcome your comments and suggestions before it is put to a vote at the AGM.</p>
-            <span class="step-date">Coming soon</span>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-text">
-            <h4>Inaugural AGM</h4>
-            <p>The first Annual General Meeting of The Cocoa Works Residents' Association — where the constitution will be formally adopted and the elected committee confirmed.</p>
-            <span class="step-date">Late October 2026</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="info-box">
       <h3>Why this matters</h3>
       <p>With formal recognition, a Residents' Association gains the legal right to be consulted on service charges, request information from the landlord, and represent residents' interests. You have made this possible.</p>
@@ -213,11 +220,14 @@ footer a:hover{color:#C8A96E;}
     </a>
 
     <div class="qr-section">
-      <img src="qr.png" alt="QR code to join" class="qr-img">
-      <div class="qr-text">
-        <h4>Not yet a member?</h4>
-        <p>It's not too late to join. Membership remains free and open to all residents of The Cocoa Works.</p>
+      <div class="qr-section-top">
+        <img src="qr.png" alt="QR code to join" class="qr-img">
+        <div class="qr-text">
+          <h4>Not yet a member?</h4>
+          <p>It's not too late to join. Membership remains free and open to all residents of The Cocoa Works.</p>
+        </div>
       </div>
+      <a href="https://docs.google.com/forms/d/1g31I3ZiJ8Nss-ZGTSU3y6ptsrFJV7GXRFFYJ1VbMTPs/viewform" target="_blank" class="qr-cta">Click here to sign up</a>
     </div>
 
   </div>
@@ -229,7 +239,6 @@ footer a:hover{color:#C8A96E;}
 </footer>
 
 <script>
-/* ── TICK MARKS ── */
 var ticksEl = document.getElementById('thermoTicks');
 ['100%','75%','50%','25%','0%'].forEach(function(l){
   var t = document.createElement('div');
@@ -238,7 +247,6 @@ var ticksEl = document.getElementById('thermoTicks');
   ticksEl.appendChild(t);
 });
 
-/* ── THERMOMETER ── */
 function setThermometer(pct, memberCount){
   pct = Math.max(0, Math.min(100, pct));
   var fill = document.getElementById('thermoFill');
@@ -260,21 +268,14 @@ function loadProgress(){
 loadProgress();
 setInterval(loadProgress, 5 * 60 * 1000);
 
-/* ── FIREWORKS ── */
 var canvas = document.getElementById('fireworks');
 var ctx = canvas.getContext('2d');
 var particles = [];
 var W, H;
-
-function resize(){
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-}
+function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
 resize();
 window.addEventListener('resize', resize);
-
 var COLOURS = ['#C8A96E','#FAF6F0','#4CAF50','#6B8F5E','#FFD700','#FF6B6B','#87CEEB','#DDA0DD'];
-
 function Particle(x, y){
   this.x = x; this.y = y;
   this.vx = (Math.random() - 0.5) * 8;
@@ -286,63 +287,25 @@ function Particle(x, y){
   this.decay = Math.random() * 0.015 + 0.01;
   this.shape = Math.random() > 0.5 ? 'circle' : 'rect';
 }
-
-Particle.prototype.update = function(){
-  this.x += this.vx;
-  this.y += this.vy;
-  this.vy += this.gravity;
-  this.vx *= 0.99;
-  this.alpha -= this.decay;
-};
-
+Particle.prototype.update = function(){ this.x += this.vx; this.y += this.vy; this.vy += this.gravity; this.vx *= 0.99; this.alpha -= this.decay; };
 Particle.prototype.draw = function(){
-  ctx.save();
-  ctx.globalAlpha = Math.max(0, this.alpha);
-  ctx.fillStyle = this.color;
-  if(this.shape === 'rect'){
-    ctx.fillRect(this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2);
-  } else {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fill();
-  }
+  ctx.save(); ctx.globalAlpha = Math.max(0, this.alpha); ctx.fillStyle = this.color;
+  if(this.shape === 'rect'){ ctx.fillRect(this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2); }
+  else { ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); ctx.fill(); }
   ctx.restore();
 };
-
-function burst(x, y){
-  for(var i = 0; i < 80; i++){
-    particles.push(new Particle(x, y));
-  }
-}
-
-function animate(){
-  ctx.clearRect(0, 0, W, H);
-  particles = particles.filter(function(p){ return p.alpha > 0; });
-  particles.forEach(function(p){ p.update(); p.draw(); });
-  requestAnimationFrame(animate);
-}
+function burst(x, y){ for(var i = 0; i < 80; i++){ particles.push(new Particle(x, y)); } }
+function animate(){ ctx.clearRect(0, 0, W, H); particles = particles.filter(function(p){ return p.alpha > 0; }); particles.forEach(function(p){ p.update(); p.draw(); }); requestAnimationFrame(animate); }
 animate();
-
-/* Launch bursts at intervals */
-var burstCount = 0;
-var maxBursts = 30;
+var burstCount = 0; var maxBursts = 30;
 function launchBurst(){
   if(burstCount >= maxBursts) return;
-  var x = Math.random() * W;
-  var y = Math.random() * H * 0.6;
-  burst(x, y);
+  burst(Math.random() * W, Math.random() * H * 0.6);
   burstCount++;
-  var delay = burstCount < 10 ? 300 : burstCount < 20 ? 600 : 1200;
-  setTimeout(launchBurst, delay);
+  setTimeout(launchBurst, burstCount < 10 ? 300 : burstCount < 20 ? 600 : 1200);
 }
-
-/* Start fireworks after short delay */
 setTimeout(launchBurst, 800);
-
-/* Also burst on click */
-document.addEventListener('click', function(e){
-  burst(e.clientX, e.clientY);
-});
+document.addEventListener('click', function(e){ burst(e.clientX, e.clientY); });
 </script>
 </body>
 </html>
